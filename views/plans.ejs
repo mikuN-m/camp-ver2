@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="js">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+    </head>
+    <body>
+
+        <div class="plan-content">
+
+            <div>
+                <h1>林間サイト</h1>
+            </div>
+
+            <% plans.forEach((plan)=>{ %>
+
+                <% if(plan.category == '林間'){ %>
+
+                    <p><%= plan.name %></p>
+                    <p><%= plan.section %></p>
+                    <p>0~<%= plan.pplNum %>人</p>
+                    <p><%= plan.siteNote %></p>
+
+                <% } %>
+
+            <% }) %>
+
+        </div>
+
+        <div class="plan-content">
+
+            <div>
+                <h1>川サイト</h1>
+            </div>
+
+            <% plans.forEach((plan)=>{ %>
+
+                <% if(plan.category == '川'){ %>
+
+                    <p><%= plan.name %></p>
+                    <p><%= plan.section %></p>
+                    <p>0~<%= plan.pplNum %>人</p>
+                    <p><%= plan.siteNote %></p>
+
+                <% } %>
+
+            <% }) %>
+
+        </div>
+    
+
+    </body>
+</html>
