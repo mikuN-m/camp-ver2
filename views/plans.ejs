@@ -7,6 +7,10 @@
     </head>
     <body>
 
+        <div class="header">
+            <%- include('components/header') %>
+        </div>
+
         <div class="plan-content">
 
             <div>
@@ -21,6 +25,8 @@
                     <p><%= plan.section %></p>
                     <p>0~<%= plan.pplNum %>人</p>
                     <p><%= plan.siteNote %></p>
+
+                    <a href="/reservation/<%= plan.name %>">予約へ進む</a><br><br>
 
                 <% } %>
 
@@ -42,6 +48,8 @@
                     <p><%= plan.section %></p>
                     <p>0~<%= plan.pplNum %>人</p>
                     <p><%= plan.siteNote %></p>
+
+                    <a href="/reservation/<%= plan.name %>">予約へ進む</a><br><br>
 
                 <% } %>
 

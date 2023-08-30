@@ -46,6 +46,12 @@ app.get('/plans',(req,res)=>{
     );
 });
 
+app.get('/reservation/:id',(req,res)=>{
+    const name = req.params.id;
+
+    res.render('reservation.ejs',{name: name})
+});
+
 
 
 app.listen(3000);

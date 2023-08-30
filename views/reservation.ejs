@@ -3,16 +3,24 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>camp</title>
         <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
     </head>
     <body>
-    
+
         <div class="header">
             <%- include('components/header') %>
         </div>
 
-        <h1>top</h1>
+        <form action="/confirmation" method="get">
 
+            <label>お名前</label>
+            <input type="text" name="name" required>
+
+            <label></label>
+
+            <input type="submit" value="確認">
+
+        </form>
+        
     </body>
 </html>
