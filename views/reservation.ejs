@@ -11,14 +11,29 @@
             <%- include('components/header') %>
         </div>
 
-        <form action="/confirmation" method="get">
+        <!-- <form action="/confirmation" method="get">
 
             <label>お名前</label>
             <input type="text" name="name" required>
 
-            <label></label>
+            <label>電話番号</label>
+            <input type="number" name="tel" required>
 
-            <input type="submit" value="確認">
+            <label>予約サイト</label>
+            <input type="text" name="site" value="<%= name %>" readonly>
+
+            <label>日にち</label>
+            <input type="date" name="data" required>
+
+            <label>時間</label>
+            <input type="time" name="time" required>
+
+            <label>人数</label>
+            <% for(let i=0; i < pplNum; i++){ %>
+                <input type="radio" name="ppl-num" value=<%= i+1 %> required><span><%= i+1 %></span>
+            <% } %>
+
+            <input type="submit" value="確認"> -->
 
         </form>
         
