@@ -15,10 +15,23 @@
 
                 <ul>
                     <a href="/plans"><li>プラン・ご予約</li></a>
+
+                    <% if (locals.login) { %>
+                        <a href="/logout"><li>ログアウト</li></a>
+                    <% } else { %>
+                        <a href="/login"><li>ログイン</li></a>
+                    <% } %>
+
                     <a><li>マイページ</li></a>           
                     <a><li>アクセス</li></a>
                     <a><li>お問い合わせ</li></a>
                 </ul>
+
+                <% if (locals.login) { %>
+                    <%= locals.name %>
+                <% } else { %>
+                    <p>ゲスト</p>
+                <% } %>
 
             </div>
 
