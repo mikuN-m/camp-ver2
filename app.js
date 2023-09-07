@@ -15,6 +15,8 @@ const connection = mysql.createConnection({
 
 app.set('view engine', 'ejs');
 
+app.use(express.static('stylesheets'));
+
 app.use(express.json());
 app.use(express.urlencoded({
     extended: true
