@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="js">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+        <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="/css/main.css">
+    </head>
+    <body>
+
+        <div class="footer-content">
+
+            <div class="footer-nav">
+
+                <ul>
+                    <a href="/plans"><li>プラン・ご予約</li></a>
+
+                    <% if (locals.login) { %>
+                        <a href="/logout"><li>ログアウト</li></a>
+                    <% } else { %>
+                        <a href="/login"><li>ログイン</li></a>
+                    <% } %>
+
+                    <a><li>マイページ</li></a>           
+                    <a><li>アクセス</li></a>
+                    <a><li>お問い合わせ</li></a>
+                </ul>
+
+            </div>
+
+        </div>
+        
+    </body>
+</html>
