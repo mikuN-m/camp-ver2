@@ -4,6 +4,11 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+        <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="/css/main.css">
     </head>
     <body>
 
@@ -11,7 +16,9 @@
 
             <div class="header-content">
 
-                <a href="/"><h1>タイトル</h1></a>
+                <a href="/">
+                    <h1>タイトル</h1>
+                </a>
 
                 <ul>
                     <a href="/plans"><li>プラン・ご予約</li></a>
@@ -26,12 +33,6 @@
                     <a><li>アクセス</li></a>
                     <a><li>お問い合わせ</li></a>
                 </ul>
-
-                <% if (locals.login) { %>
-                    <%= locals.name %>
-                <% } else { %>
-                    <p>ゲスト</p>
-                <% } %>
 
             </div>
 

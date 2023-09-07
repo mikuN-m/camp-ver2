@@ -1,0 +1,163 @@
+body {
+    font-family: 'Noto Sans JP', sans-serif;
+    background-color: #e9f8cb;
+    color: #363636;
+}
+
+a {
+    text-decoration: none;
+    color: #363636;
+}
+
+li {
+    list-style: none;
+}
+
+img {
+    width: 100%;
+}
+
+
+/* header */
+.header-container {
+    width: 100%;
+    height: 100px;
+}
+
+.header-content {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+}
+
+.header-content ul, .header-content h1 {
+    line-height: 100px;
+}
+
+.header-content ul {
+    display: flex;
+    margin-left: auto;
+}
+
+.header-content li {
+    padding: 0 20px;
+    font-weight: bold;
+    transition: .3s all;
+}
+
+.header-content li:hover {
+    background-color: #21301fad;
+    color: #e9f8cb;
+}
+
+
+/* main */
+.top-img-content {
+    height: 450px;
+    background-image: url(/img/top-img/top.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    display: grid;
+    place-items: center;
+    animation: loop 20s ease infinite;
+}
+
+@keyframes loop {
+    0% {
+        background-image: url(/img/top-img/top-slide/slide-1.jpg);
+    }
+    20% {
+        background-image: url(/img/top-img/top-slide/slide-2.jpg);
+    }
+    40% {
+        background-image: url(/img/top-img/top-slide/slide-3.jpg);
+    }
+    60% {
+        background-image: url(/img/top-img/top-slide/slide-4.jpg);
+    }
+    80% {
+        background-image: url(/img/top-img/top-slide/slide-5.jpg);
+    }
+    100% {
+        background-image: url(/img/top-img/top-slide/slide-1.jpg);
+    }
+}
+
+
+
+.top-img-content a {
+    background-color: #d1d4cbb9;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+
+.top-wrap {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.top-feature {
+    display: flex;
+    width: 100%;
+    height: 400px;
+    margin: 60px auto;
+    justify-content: space-between;
+}
+
+.feautre-text {
+    margin-top: 15%;
+    width: 50%;
+}
+
+.feature-imgs {
+    width: 30%;
+    position: relative;
+}
+
+.feature-imgs .img {
+    position: absolute;
+    background-image: url(/img/top-img/top-1.jpg);
+    width: 100%;
+    aspect-ratio: 1;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    box-shadow: 12px 12px 8px -4px #777777;
+}
+
+
+.service-wrap {
+    margin: 100px auto 150px;
+}
+
+.service-title {
+    text-align: center;
+    font-size: 1.5rem;
+    border-bottom: 2px solid #21301fad;
+}
+
+.service-container {
+    display: flex;
+    margin: 60px auto;
+    justify-content: space-around;
+    text-align: center;
+}
+
+.service-box i {
+    font-size: 4rem;
+    margin-bottom: 10px;
+}
+
+.service-box p {
+    font-weight: 700;
+}
+
+.service-text {
+    width: 70%;
+    text-align: left;
+    margin: 0 auto;
+}
