@@ -51,6 +51,22 @@ img {
 }
 
 
+/* footer */
+.footer-content {
+    width: 100%;
+    height: 300px;
+    background-color: #21301fad;
+    display: grid;
+    place-items: center;
+    text-align: center;
+}
+
+.footer-nav li {
+    color: #e9f8cb;
+    line-height: 50px;
+}
+
+
 /* main */
 .top-img-content {
     height: 450px;
