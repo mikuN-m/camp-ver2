@@ -72,7 +72,6 @@ img {
     height: 100px;
     background-color: #21301fad;
     text-align: center;
-    margin-bottom: 40px;
 }
 
 .title-content h1 {
@@ -191,4 +190,94 @@ img {
     width: 70%;
     text-align: left;
     margin: 0 auto;
+}
+
+
+/* plan */
+.plan-text {
+    width: 600px;
+    margin: 40px auto;
+}
+
+.plan-content {
+    width: 800px;
+    margin: 0 auto 40px;
+}
+
+.plan-content h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.site-box {
+    margin-bottom: 20px;
+}
+
+.site-title {
+    height: 100px;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: grid;
+    place-items: center;
+    position: relative;
+    cursor: pointer;
+}
+
+.site-title::before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: #00000077;
+}
+
+.site-title p {
+    position: static;
+    z-index: 5;
+    font-size: 1.5rem;
+    color: #e9f8cb;
+}
+
+#site1-1 {
+    background-image: url(/img/sites-img/site1-1.jpg);
+}
+#site1-2 {
+    background-image: url(/img/sites-img/site1-2.jpg);
+}
+#site2-3 {
+    background-image: url(/img/sites-img/site2-1.jpg);
+}
+#site2-4 {
+    background-image: url(/img/sites-img/site2-2.jpg);
+}
+
+.site-detail {
+    width: 100%;
+    background-color: #21301fad;
+    padding: 20px 40px;
+    display: none;
+    color: #e9f8cb;
+}
+
+.site-detail p {
+    line-height: 40px;
+}
+
+.reservation-btn {
+    text-align: center;
+    margin: 40px auto 10px;
+}
+
+.reservation-btn a {
+    padding: 10px 20px;
+    background-color: #e9f8cb;
+}
+
+.site-detail-togle {
+    display: block;
+}
+.site-arrow-togle {
+    transform:rotate(180deg);
 }

@@ -15,22 +15,43 @@
             <%- include('components/title', {title: 'プラン・ご予約'}) %>
         </div>
 
+        <div class="plan-text">
+            <p>
+                テキストテキストテキストテキストテキストテキスト
+                テキストテキストテキストテキストテキストテキスト
+                テキストテキストテキストテキストテキストテキスト
+                テキストテキストテキストテキストテキストテキスト
+            </p>
+        </div>
+
         <div class="plan-content">
 
             <div>
                 <h1>林間サイト</h1>
             </div>
 
-            <% plans.forEach((plan)=>{ %>
+            <% plans.forEach((plan,i)=>{ %>
 
                 <% if(plan.category == '林間'){ %>
 
-                    <p><%= plan.name %></p>
-                    <p><%= plan.section %></p>
-                    <p>1~<%= plan.pplNum %>人</p>
-                    <p><%= plan.siteNote %></p>
+                    <div class="site-box">
+                        <div class="site-title" id="site1-<%= i+1 %>">
+                            <p>
+                                <%= plan.name %>
+                                <span><i class="fa-solid fa-chevron-down site-arrow"></i></span>
+                            </p>
+                        </div>
 
-                    <a href="/reservation/<%= plan.name %>">予約へ進む</a><br><br>
+                        <div class="site-detail">
+                            <p><%= plan.section %></p>
+                            <p>1~<%= plan.pplNum %>人</p>
+                            <p><%= plan.siteNote %></p>
+                            
+                            <div class="reservation-btn">
+                                <a href="/reservation/<%= plan.name %>">予約へ進む</a>
+                            </div>
+                        </div>
+                    </div>                  
 
                 <% } %>
 
@@ -44,16 +65,28 @@
                 <h1>川サイト</h1>
             </div>
 
-            <% plans.forEach((plan)=>{ %>
+            <% plans.forEach((plan,i)=>{ %>
 
                 <% if(plan.category == '川'){ %>
 
-                    <p><%= plan.name %></p>
-                    <p><%= plan.section %></p>
-                    <p>1~<%= plan.pplNum %>人</p>
-                    <p><%= plan.siteNote %></p>
+                    <div class="site-box">
+                        <div class="site-title" id="site2-<%= i+1 %>">
+                            <p>
+                                <%= plan.name %>
+                                <span><i class="fa-solid fa-chevron-down site-arrow"></i></span>
+                            </p>
+                        </div>
 
-                    <a href="/reservation/<%= plan.name %>">予約へ進む</a><br><br>
+                        <div class="site-detail">
+                            <p><%= plan.section %></p>
+                            <p>1~<%= plan.pplNum %>人</p>
+                            <p><%= plan.siteNote %></p>
+
+                            <div class="reservation-btn">
+                                <a href="/reservation/<%= plan.name %>">予約へ進む</a>
+                            </div>
+                        </div>
+                    </div>                
 
                 <% } %>
 
@@ -61,6 +94,25 @@
 
         </div>
     
+        <%- include('components/footer') %>
+
+        <script src="https://kit.fontawesome.com/aef504842f.js" crossorigin="anonymous"></script>
+
+        <script>
+
+            const trigger = document.getElementsByClassName('site-title');
+            const target = document.getElementsByClassName('site-detail');
+            const arrow = document.getElementsByClassName('site-arrow');
+
+            for(let i=0; i<trigger.length; i++){
+                trigger[i].addEventListener('click',()=>{
+                    target[i].classList.toggle('site-detail-togle');
+                    arrow[i].classList.toggle('site-arrow-togle');
+                });
+            }
+            
+            
+        </script>
 
     </body>
 </html>
